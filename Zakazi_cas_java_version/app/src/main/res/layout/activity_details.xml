@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <!--Tool bar -->
+    <RelativeLayout
+        android:id="@+id/toolbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape_toolbar02"
+        >
+        <!--Back button -->
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_back_white"/>
+        <!--Tool bar title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Оглас - Детали"
+            android:fontFamily="serif"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+        <!-- user Profile-->
+        <ImageButton
+            android:id="@+id/profileBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_person"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:background="@android:color/transparent"/>
+
+    </RelativeLayout>
+
+    <!--Ad info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbarRL"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginLeft="3dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="280dp">
+
+            <!--Title -->
+            <TextView
+                android:id="@+id/titleTv"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:text="Наслов на оглас"
+                android:layout_toEndOf="@+id/pdfRl"
+                android:maxLines="1"/>
+            <!--Descriptino -->
+            <TextView
+                android:id="@+id/descriptionTv"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Опис на оглас"
+                android:fontFamily="serif"
+                android:layout_marginTop="8dp"
+                android:paddingBottom="2dp"
+                android:layout_below="@id/titleTv"
+                android:maxLines="15"
+                android:ellipsize="end"/>
+
+            <!--Professor name -->
+            <TextView
+                android:id="@+id/nameTv"
+                style="@style/TextAppearance.AppCompat.Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descriptionTv"
+                android:text="Професор"
+                android:fontFamily="serif"
+                android:maxLines="1"/>
+            <LinearLayout
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nameTv">
+
+                <!--Price -->
+                <TextView
+                    android:id="@+id/priceTv"
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:layout_below="@id/nameTv"
+                    android:fontFamily="serif"
+                    android:textAlignment="center"
+                    android:maxLines="1"/>
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Body1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="денари"
+                    android:layout_toEndOf="@id/priceTv"
+                    android:fontFamily="serif"
+                    android:textAlignment="center"
+                    android:maxLines="1"/>
+
+            </LinearLayout>
+            <!--Time -->
+            <TextView
+                android:id="@+id/timeTv"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:layout_below="@id/price"
+                android:fontFamily="serif"
+                android:textAlignment="center"
+                android:maxLines="1"/>
+
+            <!--Phone -->
+            <TextView
+                android:id="@+id/phoneTv"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="071245673"
+                android:fontFamily="serif"
+                android:layout_alignParentBottom="true"
+                android:textStyle="bold"
+                android:maxLines="1"/>
+
+            <!--Phone Button -->
+            <ImageButton
+                android:id="@+id/phoneBtn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/ic_phone_white"
+                android:background="@drawable/shape_button04"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

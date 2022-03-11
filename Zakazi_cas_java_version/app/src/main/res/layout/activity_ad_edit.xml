@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdEditActivity">
+
+    <!-- Toolbar-->
+    <RelativeLayout
+        android:id="@+id/toolbarRl"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/shape_toolbar01">
+
+        <!--Back button -->
+        <ImageButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/transparent"
+            android:padding="5dp"
+            android:src="@drawable/ic_back_white"/>
+
+        <!--Icon :Image -->
+        <ImageView
+            android:id="@+id/iconIv"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/backBtn"
+            android:src="@drawable/logo"/>
+
+        <!--Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iconIv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="serif"
+            android:text="Измени оглас"
+            android:textColor="@color/white"
+            android:textSize="28sp"/>
+
+
+    </RelativeLayout>
+
+    <!--Scroll View  -->
+    <ScrollView
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <!--Input Ad Title -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/titleTil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="225dp"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/titleEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext01"
+                android:drawableStart="@drawable/ic_title_gray"
+                android:drawablePadding="10dp"
+                android:hint="Наслов на огласот"
+                android:fontFamily="serif"
+                android:textSize="16sp"
+                android:inputType="textPersonName|textCapWords"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray01"
+
+                />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Input Ad Description -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/descriptionTil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_below="@+id/titleTil"
+            android:layout_marginTop="5dp"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/descriptionEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext01"
+                android:drawableStart="@drawable/ic_description_gray"
+                android:drawablePadding="10dp"
+                android:hint="Опис"
+                android:fontFamily="serif"
+                android:inputType="textMultiLine|textCapSentences"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray01"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Ad timing -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/timeTil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_below="@+id/descriptionTil"
+            android:layout_marginTop="5dp"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/timeEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext01"
+                android:drawableStart="@drawable/ic_time_gray"
+                android:drawablePadding="10dp"
+                android:hint="Времетраење на час"
+                android:fontFamily="serif"
+                android:inputType="time"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray01"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Ad pricing-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/priceTil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_below="@+id/timeTil"
+            android:layout_marginTop="5dp"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/priceEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext01"
+                android:drawableStart="@drawable/ic_money_gray"
+                android:drawablePadding="10dp"
+                android:hint="Цена"
+                android:fontFamily="serif"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray01"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Phone-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phoneTil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_below="@+id/priceTil"
+            android:layout_marginTop="5dp"
+            app:hintEnabled="false">
+
+            <EditText
+                android:id="@+id/phoneEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext01"
+                android:drawableStart="@drawable/ic_phone_gray"
+                android:drawablePadding="10dp"
+                android:hint="Телефон"
+                android:fontFamily="serif"
+                android:inputType="phone"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/gray01"
+
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!--Pick Category VAZNO VAZNO VAZNO VAZNO VAZNO-->
+
+        <!--Ad category from dialog -->
+        <TextView
+            android:id="@+id/categoryTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/phoneTil"
+            android:background="@drawable/shape_edittext01"
+            android:drawableStart="@drawable/ic_category_gray"
+            android:drawableEnd="@drawable/ic_down_gray"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="Категорија"
+            android:fontFamily="serif"
+            android:padding="10dp"
+            android:textColorHint="@color/gray01"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            />
+        <!--Button Upload Ad -->
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/categoryTv"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/button_shape_01"
+            android:fontFamily="serif"
+            android:text="Зачувај"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:backgroundTint="@color/ocean" />
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

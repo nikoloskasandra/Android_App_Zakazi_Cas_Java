@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "385789753753",
+    "project_id": "zakazi--cas",
+    "storage_bucket": "zakazi--cas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385789753753:android:f005736745a2723db2fb08",
+        "android_client_info": {
+          "package_name": "com.proba_mpp.zakazi_cas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385789753753-s2q1ngohrhikvejs00nlenf1dbm8qle6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.proba_mpp.zakazi_cas",
+            "certificate_hash": "b4ad31c6d93056c108d77a28908fdbb3b1208328"
+          }
+        },
+        {
+          "client_id": "385789753753-um1s0mp1c43938jv1h0ntk65ajo6vl2q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDC_lQSdQ8U5wg7EG-VaYy9PGmoiDB88Ms"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385789753753-um1s0mp1c43938jv1h0ntk65ajo6vl2q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

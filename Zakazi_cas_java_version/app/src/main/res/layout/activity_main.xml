@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!--Logo -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="384dp"
+        android:layout_height="328dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/logo"
+        android:transitionName="logo_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Application slogan - Слоган на апликацијата-->
+    <TextView
+        android:id="@+id/vision"
+        android:layout_width="419dp"
+        android:layout_height="23dp"
+        android:fontFamily="serif"
+        android:text="сподели, научи"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Application title - Име на апликацијата -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif"
+        android:text="ЗАКАЖИ ЧАС"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="52sp"
+        android:transitionName="logo_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <!--Button for users (professor) - Копче кое те носи на страна за Најава (Login) -->
+    <!-- Во случај корисникот да не е рег - оди на регистрација, ако е најавен - да го носи на Профил -->
+    <Button
+        android:id="@+id/btn_profesor"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="145dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="serif"
+        android:text="ПРОФЕСОР"
+        android:textStyle="bold"
+        android:background="@drawable/button_shape_01"
+        app:backgroundTint="@color/ocean"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <!--Button to go to POCETNA - Main MANU full of professors descriptions -->
+    <!--Копче кое носи на ПОЧЕТНА - страна каде се прикажани описите на сите професори по категории -->
+
+    <Button
+        android:id="@+id/btn_p"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="145dp"
+        android:layout_height="44dp"
+        android:background="@drawable/button_shape_01"
+        android:fontFamily="serif"
+        android:text="ПОЧЕТНА"
+        android:textStyle="bold"
+        app:backgroundTint="@color/gray01"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_profesor"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <Button
+        android:id="@+id/btnAdAdd"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="145dp"
+        android:layout_height="44dp"
+        android:background="@drawable/button_shape_01"
+        android:fontFamily="serif"
+        android:text="+ ОГЛАС"
+        android:textStyle="bold"
+        app:backgroundTint="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_p"
+        app:layout_constraintVertical_bias="0.163" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
